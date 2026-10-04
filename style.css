@@ -8,3 +8,36 @@ body{
     min-height: 100vh;
     margin: 0;
 }
+.app-container{
+    text-align: center;
+}
+.turntable{
+    position:relative;
+    width:340px;
+    height:340px;
+    background-color: #282828;
+    border-radius: 20px;
+    padding:20px;
+    box-shadow: 0 20px 40px rbga(0, 0, 0, 0.6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px auto;
+}
+.vinyl-record{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+
+    background:radial-gradient(circle, #181818 35%, #282828 36%, #111111 42%, #222222 65%, #000000 100%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+    animation:spin 3s linear infinite;
+    animation-play-state: paused;
+}
+.vinyl-record.spinning{
+    animation-play-state: running;
+}
