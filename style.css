@@ -1,70 +1,80 @@
-body{
+body {
     background-color: #121212;
-    color:#ffffff;
-    font-family:sans-serif;
-    display:flex;
+    color: #ffffff;
+    font-family: sans-serif;
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
 }
-.app-container{
+
+.app-container {
     text-align: center;
 }
-.turntable{
-    position:relative;
-    width:340px;
-    height:340px;
+
+.turntable {
+    position: relative;
+    width: 340px;
+    height: 340px;
     background-color: #282828;
     border-radius: 20px;
-    padding:20px;
-    box-shadow: 0 20px 40px rbga(0, 0, 0, 0.6);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:20px auto;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
-.vinyl-record{
-    width:280px;
-    height:280px;
-    border-radius:50%;
 
-    background:radial-gradient(circle, #181818 35%, #282828 36%, #111111 42%, #222222 65%, #000000 100%);
-    display:flex;
+.vinyl-record {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #181818 35%, #282828 36%, #111111 42%, #222222 65%, #000000 100%);
+    display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-
-    animation:spin 3s linear infinite;
+    animation: spin 3s linear infinite;
     animation-play-state: paused;
 }
-.vinyl-record.spinning{
+
+.vinyl-record.spinning {
     animation-play-state: running;
 }
-.album-art{
-    width:100px;
-    height:100px;
+
+.album-art {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border:4px solid #111;
-    object-fit:cover;
+    border: 4px solid #111;
+    object-fit: cover;
 }
-.tonearm{
-    position:absolute;
-    top:25px;
-    right:35px;
-    width:8px;
-    height:140px;
-    background:#b3b3b3;
+
+.tonearm {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    width: 8px;
+    height: 140px;
+    background: #b3b3b3;
     border-radius: 4px;
     transform-origin: top center;
     transform: rotate(-30deg);
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
 }
-.tonearm.active{
+
+.tonearm.active {
     transform: rotate(0deg);
 }
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    from{transform:rotate(360deg);}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
